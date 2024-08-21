@@ -115,7 +115,6 @@ contract OpenQV1 is OpenQStorageV1 {
     /// @param _fundingGoalToken The token address to be used for the funding goal
     /// @param _fundingGoalVolume The volume of token to be used for the funding goal
     function setFundingGoal(
-        string calldata _bountyId,
         address _fundingGoalToken,
         uint256 _fundingGoalVolume
     ) external onlyProxy {
