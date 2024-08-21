@@ -11,7 +11,7 @@ import '../Library/Errors.sol';
 abstract contract TokenWhitelist is Ownable {
     uint256 public tokenAdderessesLimit;
     uint256 public tokenCount;
-    uint256 public TOKEN_ADDRESS_LIMIT;
+    /// uint256 public TOKEN_ADDRESS_LIMIT;
     mapping(address => bool) public whitelist;
 
     /// @notice Determines if a tokenAddress is whitelisted
