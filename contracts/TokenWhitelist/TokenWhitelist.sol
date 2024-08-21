@@ -9,7 +9,7 @@ import '../Library/Errors.sol';
 /// @notice Base contract for token whitelists
 /// @dev Whitelisting and token address limit is implemented primarily as a means of preventing out-of-gas exceptions when looping over funded addresses for payouts
 abstract contract TokenWhitelist is Ownable {
-    uint256 public TOKEN_ADDRESS_LIMIT;
+    uint256 public tokenAdderessesLimit;
     uint256 public tokenCount;
     mapping(address => bool) public whitelist;
 
@@ -48,6 +48,6 @@ abstract contract TokenWhitelist is Ownable {
         external
         onlyOwner
     {
-        TOKEN_ADDRESS_LIMIT = _newTokenAddressLimit;
+        tokenAdderessesLimit = _newTokenAddressLimit;
     }
 }
