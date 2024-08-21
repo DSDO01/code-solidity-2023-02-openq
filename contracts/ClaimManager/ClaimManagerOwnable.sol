@@ -12,6 +12,14 @@ abstract contract ClaimManagerOwnable is ContextUpgradeable {
     /// @notice ClaimManagerProxy address
     address private _claimManager;
 
+    /// @notice Initializes child contract with _initialClaimManager. Only callabel during initialization.
+    /// @param _initialClaimManager The initial claim manager address
+    function __ClaimManagerOwnable_init(address _initialClaimManager)
+        internal
+        onlyInitializing
+    {
+        _claimManager = _initialClaimManager;
+    }
 
     /// @notice Returns the address of _claimManager
     function claimManager() external view virtual returns (address) {
